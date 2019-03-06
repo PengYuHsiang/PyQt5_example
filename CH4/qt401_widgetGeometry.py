@@ -1,0 +1,30 @@
+from PyQt5.QtWidgets import QApplication,QWidget,QPushButton
+import sys
+
+app = QApplication(sys.argv)
+widget = QWidget()
+btn = QPushButton(widget)
+btn.setText("Button")
+btn.move(20,20)
+widget.resize(300,200)
+widget.move(250,200)
+
+widget.setWindowTitle("PyQt5座標系統範例")
+widget.show()
+print("QWidget:")
+print("Widget.x(): %d"%widget.x())
+print("Widget.y(): %d"%widget.y())
+print("Widget.width(): %d"%widget.width())
+print("Widget.height(): %d"%widget.height())
+print('='*80)
+print("Widget.geometry().x(): %d"%widget.geometry().x())
+print("Widget.geometry().y(): %d"%widget.geometry().y())
+print("Widget.geometry().width(): %d"%widget.geometry().width())
+print("Widget.geometry().height(): %d"%widget.geometry().height())
+print('='*80)
+print("Widget.frameGeometry().x(): %d"%widget.frameGeometry().x())
+print("Widget.frameGeometry().y(): %d"%widget.frameGeometry().y())
+print("Widget.frameGeometry().width(): %d"%widget.frameGeometry().width())
+print("Widget.frameGeometry().height(): %d"%widget.frameGeometry().height())
+
+sys.exit(app.exec_())
